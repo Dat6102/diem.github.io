@@ -69,7 +69,7 @@ function submitForm() {
 
     if (diem_xet_tuyen >= diem_chuan_nv1 && diem_xet_tuyen < diem_chuan_nv2) {
         document.getElementById('nguyen_vong').innerHTML = "Bạn có khả năng đỗ nguyện vọng 1.";
-    } else if (diem_xet_tuyen >= trung_tuyen_nv2) {
+    } else if (diem_xet_tuyen >= diem_chuan_nv2) {
         document.getElementById('nguyen_vong').innerHTML = "Bạn có khả năng đỗ nguyện vọng 2.";
     } else {
         document.getElementById('nguyen_vong').innerHTML = "Rất tiếc, bạn chưa đủ điểm để đỗ các nguyện vọng đã chọn.";
