@@ -1,0 +1,85 @@
+@font-face {
+    font-family: 'CustomFont'; /* Đặt tên cho font */
+    src: url('font.ttf') format('truetype'); /* Đường dẫn và định dạng font */
+    /* Các thuộc tính khác (nếu cần) */
+}
+
+body {
+    font-family: 'CustomFont', Arial, sans-serif; /* Sử dụng font 'CustomFont' cho body */
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8efb6;
+}
+
+.container {
+    background-color: #f2c185;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #592e1e;
+    background-color: #dff2f2;
+    border-radius: 15px;
+}
+
+#results p {
+    margin: 0;
+    padding: 0;
+    background-color: #d9c3b0;
+}
+
+#results b {
+    margin: 0;
+    padding: 0;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #f2af5c;
+    border-radius: 4px;
+    background-color: #ffffee;
+    box-sizing: border-box;
+    font-family: 'CustomFont', Arial, sans-serif; /* Sử dụng font 'CustomFont' cho input và select */
+}
+
+button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-family: 'CustomFont', Arial, sans-serif; /* Sử dụng font 'CustomFont' cho nút button */
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#results {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #ffffee;
+}

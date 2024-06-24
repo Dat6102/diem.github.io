@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính điểm xét tuyển</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link đến file CSS -->
+</head>
+<body>
+    <div class="container">
+        <h1>Tính điểm xét tuyển</h1>
+        <b>Lưu ý: dữ liệu có thể thay đổi qua mỗi năm. Mình sẽ cập nhật sớm nhất có thể.</b>
+        <b>Bạn có thể liên hệ và góp ý qua
+            <a href="https://facebook.com/tandat.offcial"target="_blank">Facebook của mình</a>
+        </b>
+        <form id="score-form">
+            <!-- Nhập điểm thi -->
+            <h2>Điểm thi tuyển sinh</h2>
+            <div class="form-group">
+                <label for="toan">Toán (0-10):</label>
+                <input type="number" id="toan" name="toan" min="0" max="10" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="ngu_van">Ngữ văn (0-10):</label>
+                <input type="number" id="ngu_van" name="ngu_van" min="0" max="10" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="ngoai_ngu">Ngoại ngữ (0-10):</label>
+                <input type="number" id="ngoai_ngu" name="ngoai_ngu" min="0" max="10" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="diem_uu_tien">Điểm ưu tiên (nếu có, không thì nhập 0):</label>
+                <input type="number" id="diem_uu_tien" name="diem_uu_tien" min="0" step="0.01" required>
+            </div>
+
+            <!-- Nhập điểm nguyện vọng yêu cầu -->
+            <h2>Điểm nguyện vọng yêu cầu</h2>
+            <div class="form-group">
+                <label for="diem_chuan_nv1">Nguyện vọng 1:</label>
+                <input type="number" id="diem_chuan_nv1" name="diem_chuan_nv1" min="0" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="diem_chuan_nv2">Nguyện vọng 2:</label>
+                <input type="number" id="diem_chuan_nv2" name="diem_chuan_nv2" min="0" step="0.01" required>
+            </div>
+
+            <!-- Nhập điểm học tập -->
+            <h2>Điểm trung bình môn</h2>
+            <div class="form-group">
+                <label for="diem_ngu_van">Ngữ văn:</label>
+                <input type="number" id="diem_ngu_van" name="diem_ngu_van" min="0" max="10" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="diem_toan">Toán học:</label>
+                <input type="number" id="diem_toan" name="diem_toan" min="0" max="10" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="diem_ngoai_ngu">Ngoại ngữ:</label>
+                <input type="number" id="diem_ngoai_ngu" name="diem_ngoai_ngu" min="0" max="10" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="diem_gdcd">GDCD:</label>
+                <input type="number" id="diem_gdcd" name="diem_gdcd" min="0" max="10" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="diem_lich_su_dia_ly">Lịch sử và Địa lí:</label>
+                <input type="number" id="diem_lich_su_dia_ly" name="diem_lich_su_dia_ly" min="0" max="10" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="diem_khtn">Khoa học tự nhiên:</label>
+                <input type="number" id="diem_khtn" name="diem_khtn" min="0" max="10" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="diem_cong_nghe">Công nghệ:</label>
+                <input type="number" id="diem_cong_nghe" name="diem_cong_nghe" min="0" max="10" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="diem_tin_hoc">Tin học:</label>
+                <input type="number" id="diem_tin_hoc" name="diem_tin_hoc" min="0" max="10" step="0.01" required>
+            </div>
+
+            <!-- Nhập kết quả các môn đặc biệt -->
+            <h2>Kết quả môn phụ</h2>
+            <div class="form-group">
+                <label for="nghe_thuat">Nghệ thuật (Đạt hoặc Chưa đạt):</label>
+                <select id="nghe_thuat" name="nghe_thuat" required>
+                    <option value="đạt">Đạt</option>
+                    <option value="chưa đạt">Chưa đạt</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="hd_trai_nghiem">Hoạt động trải nghiệm, hướng nghiệp (Đạt hoặc Chưa đạt):</label>
+                <select id="hd_trai_nghiem" name="hd_trai_nghiem" required>
+                    <option value="đạt">Đạt</option>
+                    <option value="chưa đạt">Chưa đạt</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="noi_dung_dia_phuong">Nội dung giáo dục của địa phương (Đạt hoặc Chưa đạt):</label>
+                <select id="noi_dung_dia_phuong" name="noi_dung_dia_phuong" required>
+                    <option value="đạt">Đạt</option>
+                    <option value="chưa đạt">Chưa đạt</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="gd_the_chat">Giáo dục thể chất (Đạt hoặc Chưa đạt):</label>
+                <select id="gd_the_chat" name="gd_the_chat" required>
+                    <option value="đạt">Đạt</option>
+                    <option value="chưa đạt">Chưa đạt</option>
+                </select>
+            </div>
+
+            <!-- Nút tính điểm xét tuyển -->
+            <button type="button" onclick="submitForm()">Tính điểm xét tuyển</button>
+        </form>
+
+        <!-- Hiển thị kết quả tính toán -->
+        <div id="results">
+               <h2>Kết quả của bạn:</h2>
+               <p id="tbm"></p>
+               <p id="diem_hoc_ba"></p>
+               <p id="danh_hieu"></p>
+               <p id="ket_qua_hoc_tap"></p>
+               <p id="diem_xet_tuyen"></p>
+               <p id="nguyen_vong"></p>
+        </div>
+    </div>
+
+    <script src="main.js"></script> <!-- Link đến file JavaScript -->
+</body>
+</html>
